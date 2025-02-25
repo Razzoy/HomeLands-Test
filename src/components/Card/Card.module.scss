@@ -1,0 +1,65 @@
+@use "../../styles/mixins" as mixin;
+@use "../../styles/placeholder" as *;
+@use "../../styles/variables" as *;
+
+.cardStyling {
+  @include mixin.flexible(column, 0rem);
+  background-color: #fff;
+  min-height: 23vw;
+
+  .imageContainer{
+    img {
+      min-height: 15vw;
+      max-height: 15vw;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      &:hover{
+        cursor: pointer;
+      }
+  }
+  }
+
+  article{
+    padding: 1rem;
+  }
+
+  h5,
+  p {
+    @extend %noMarPad;
+  }
+
+  h5{
+    font-size: 1.2vw;
+    min-height: 6vw;
+  }
+  p{
+    font-size: 0.8vw;
+  }
+}
+
+@media (max-width: 1200px) {
+  .cardStyling{
+    min-height: 300px;
+    img {
+      min-height: 200px;
+    }
+    h5{
+      font-size: 1rem;
+    }
+    p{
+      font-size: 0.8rem;
+    }
+  }
+  
+  
+}
+
+@media (max-width: 700px) {
+  .cardStyling{
+    min-height: 400px;
+    img {
+      min-height: 300px;
+    }
+  }
+}
