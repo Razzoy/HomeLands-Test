@@ -1,0 +1,29 @@
+@use '../../styles/mixins' as mixin;
+@use '../../styles/placeholder' as *;
+@use '../../styles/variables' as *;
+
+.footerContainer{
+    background-color: $color-Black;
+}
+
+.footerStyling{
+    @include mixin.flexible(row, 0);
+    justify-content: space-between;
+    color: #FFF;
+    max-width: 1280px;
+    margin: 0 auto;
+    h2{
+        @extend %odibee;
+    }
+    ul{
+        list-style: none;
+        @extend %noMarPad;
+    }
+}
+
+.footerIconContainer{
+    
+    svg{
+        width: 100%;
+    }
+}

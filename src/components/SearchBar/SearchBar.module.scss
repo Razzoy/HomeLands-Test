@@ -1,0 +1,35 @@
+@use "../../styles/mixins" as mixin;
+@use "../../styles/placeholder" as *;
+@use "../../styles/variables" as *;
+
+.searchBarStyling {
+  @include mixin.flexible(row, 0);
+  border-radius: 5px;
+  overflow: hidden;
+  height: max-content;
+
+  input {
+    height: 40px;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+  }
+
+   .searchIconContainer{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #777;
+    &:hover{
+    background-color: $color-Gold;
+    }
+
+    svg {
+        color: #fff;
+        width: 20px;
+        height: 20px;
+    }
+  }
+}

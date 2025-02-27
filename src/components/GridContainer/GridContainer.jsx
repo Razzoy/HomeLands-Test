@@ -1,7 +1,16 @@
-import style from './GridContainer'
+import style from './GridContainer.module.scss';
 
-export default function GridContainer() {
-  return (
-    <div>GridContainer</div>
-  )
+export function GridContainer({ children, fraction, gap }) {
+
+    const inlinestyle = {
+    display: `grid`,
+    gridTemplateColumns: `${fraction}`,
+    gap: `${gap}`,
+    };
+
+    return (
+        <div className={style.grid} style={{ ...inlinestyle}}>
+            {children}
+        </div>
+    )
 }

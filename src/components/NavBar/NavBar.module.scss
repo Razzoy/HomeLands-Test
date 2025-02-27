@@ -1,0 +1,16 @@
+@use '../../styles/mixins' as mixin;
+@use '../../styles/placeholder' as *;
+@use '../../styles/variables' as *;
+
+.navbarStyling{
+    @include mixin.flexible(row, 1rem);
+    list-style: none;
+    @extend %noMarPad;
+    align-items: center;
+    li{
+        a{
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+}

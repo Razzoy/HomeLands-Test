@@ -1,0 +1,37 @@
+@use '../../styles/mixins' as mixin;
+@use '../../styles/placeholder' as *;
+@use '../../styles/variables' as *;
+
+
+//Header Container Styling
+.headerContainer{
+    background-color: $color-Black;
+}
+
+//Inside Header Styling
+.headerStyling{
+    @extend %odibee;
+    color: #fff;
+    @include mixin.flexible(row, 0);
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+//Logo for site
+.logo{
+    background-color: $color-Gold;
+    width: max-content;
+    padding: 1rem;
+    border: 1px solid $color-Black;
+    h1{
+        @extend %noMarPad;
+    }
+    
+}
+
+//Search & Navigation bar in a container
+.navAndSearch{ 
+    @include mixin.flexible(row, 1rem);
+}
+

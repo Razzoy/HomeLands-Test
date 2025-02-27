@@ -1,7 +1,35 @@
-import style from './NavBar.module.scss';
+import { NavLink } from "react-router-dom";
+import style from "./NavBar.module.scss";
+import {UserContext} from '../../context/userContext'
+import { useContext } from "react";
 
 export function NavBar() {
+  const { userData, setUserData } = useContext(UserContext);
+
+  const handleAuthClick = () => {
+    if (userData) {
+      setUserData(null);
+      sessionStorage.removeItem("userData");
+    } else {
+      console.log("Redirect til login");
+    }
+  };
+
   return (
-    <div>NavBar</div>
-  )
+    <>
+      <ul className={style.navbarStyling}>
+        <li>
+          <NavLink to="/">Forside</NavLink>
+        </li>
+        <li>
+          <NavLink to="/houses">Boliger til salg</NavLink>
+        </li>
+        <li>
+          <NavLink onClick={handleAuthClick} to="/login">
+            {userData ? "Logout" : "Login"}
+          </NavLink>
+        </li>
+      </ul>
+    </>
+  );
 }
