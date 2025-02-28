@@ -1,23 +1,51 @@
-@use '../../styles/mixins' as mixin;
-@use '../../styles/placeholder' as *;
-@use '../../styles/variables' as *;
+@use "../../styles/mixins" as mixin;
+@use "../../styles/placeholder" as *;
+@use "../../styles/variables" as *;
 
+.reviewContainer {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
 
-.reviewContainer{
+.review {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: $color-Rose;
+  cursor: pointer;
+}
+
+.comment {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: $color-dark;
+  opacity: 0;
+  transform: translateX(200%);
+  transition: transform 1s ease, opacity 1s ease;
+  
+}
+
+.commentVisible {
+    @extend .comment;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+.ptag {
+  p {
+    color: $color-Gold;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 1rem;
+  }
+}
+
+.hideThis{
+    opacity: 0;
     p{
-        color: $color-Gold;
+        cursor: default;
     }
-}
-
-.review{
-    width: 100%;
-    height: 100px;
-    background-color: $color-Rose;
-}
-
-.comment{
-    width: 100%;
-    height: 100px;
-    background-color: $color-Rose;
-
 }

@@ -2,7 +2,6 @@ import { useContext, useState } from "react";
 import { UserContext } from "../context/UserContext";
 import style from "./pageStyles/LoginPage.module.scss";
 import { Section } from "../components/Section/Section";
-import { GridContainer } from "../components/GridContainer/GridContainer";
 import { InputField } from "../components/InputField/InputField";
 import { CustomButton } from "../components/CustomButton/CustomButton";
 
