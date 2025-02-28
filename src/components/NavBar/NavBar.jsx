@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import style from "./NavBar.module.scss";
-import {UserContext} from '../../context/userContext'
+import {UserContext} from '../../context/UserContext'
 import { useContext } from "react";
 
 export function NavBar() {
@@ -10,8 +10,7 @@ export function NavBar() {
     if (userData) {
       setUserData(null);
       sessionStorage.removeItem("userData");
-    } else {
-      console.log("Redirect til login");
+      window.location.reload();
     }
   };
 

@@ -6,6 +6,7 @@
 //Header Container Styling
 .headerContainer{
     background-color: $color-Black;
+    padding: 0 1rem;
 }
 
 //Inside Header Styling
@@ -33,5 +34,6 @@
 //Search & Navigation bar in a container
 .navAndSearch{ 
     @include mixin.flexible(row, 1rem);
+    align-items: center;
 }
 

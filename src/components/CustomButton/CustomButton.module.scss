@@ -1,0 +1,13 @@
+@use "../../styles/mixins" as mixin;
+@use "../../styles/placeholder" as *;
+@use "../../styles/variables" as *;
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: $color-Gold;
+  color: #fff;
+}

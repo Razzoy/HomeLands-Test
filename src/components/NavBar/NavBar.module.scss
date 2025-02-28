@@ -11,6 +11,11 @@
         a{
             color: #fff;
             text-decoration: none;
+            font-size: 1rem;
+            &:hover{
+                cursor: pointer;
+                color: $color-Gold;
+            }
         }
     }
 }
